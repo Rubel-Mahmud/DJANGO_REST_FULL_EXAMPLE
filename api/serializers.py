@@ -1,17 +1,17 @@
 from rest_framework import serializers
 from example.models import Industry, Company, Person
 
-class IndustrySerializer(serializers.ModelSerializer):
+class IndustrySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Industry
-        fields = '__all__'
+        fields = ('id', 'url', 'name', 'code')
 
-class CompanySerializer(serializers.ModelSerializer):
+class CompanySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Company
-        fields = '__all__'
+        fields = ('id', 'url', 'name', 'industry')
 
-class PersonSerializer(serializers.ModelSerializer):
+class PersonSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Person
-        fields = '__all__'
+        fields = ('id', 'url', 'name', 'companies')
