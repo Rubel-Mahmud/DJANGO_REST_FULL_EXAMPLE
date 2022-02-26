@@ -8,5 +8,5 @@ router.register('companies', CompanyViewSet)
 router.register('persons', PersonViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('', include(router.urls), name='api_urls'),
 ]

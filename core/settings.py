@@ -50,6 +50,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Custom Middlewares
+    'api.middlewares.url_validator_middleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
